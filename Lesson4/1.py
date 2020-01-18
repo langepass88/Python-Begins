@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from sys import argv
+import sys
 
-script_name, prod, rate, prize = argv
-
-prod = float(prod)
-rate = float(rate)
-prize = float(prize)
+prod, rate, prize = map(float, sys.argv[1:])
 print('Your salary is: ', (prod * rate) + prize)

@@ -1,11 +1,13 @@
 from itertools import cycle, count
-n = int(input('ВВедите число: '))
-for el in count(n):
+
+
+for el in count(int(input('Введите стартовое число: '))):
     if el > 10:
         break
     else:
         print(el)
 print('==================')
+
 it = int(input('Сколько раз повторить элементы списка? '))
 c = 0
 for el in cycle('abc'):
