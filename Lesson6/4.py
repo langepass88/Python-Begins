@@ -33,9 +33,7 @@ class TownCar(Car):
 
 
 class SportCar(Car):
-    def __init__(self, speed, color, name):
-        super().__init__(speed, color, name)
-        self.speed = speed
+    pass
 
 
 class WorkCar(Car):
@@ -51,7 +49,7 @@ class PoliceCar(Car):
         super().__init__(speed, color, name, is_police=True)
 
 
-bmw = Car(60, 'red', 'bmw', False)
+bmw = Car(60, 'red', 'bmw')
 bmw.go()
 bmw.stop()
 bmw.turn('прямо')

@@ -8,6 +8,6 @@ class Road:
         return print(f'Масса асфальта равна: {self._width * self._length * weight * thick}')
 
 
-a = Road(200, 300)
-a.calculation()
-a.calculation(40, 3)
+my_road = Road(200, 300)
+my_road.calculation()
+my_road.calculation(40, 3)
