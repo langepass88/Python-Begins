@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Clothes(ABC):
+    def __init__(self, name):
+        self.name = name
 
     @abstractmethod
     def expense(self):
@@ -10,6 +12,7 @@ class Clothes(ABC):
 
 class Coat(Clothes):
     def __init__(self, name, size):
+        super().__init__(size)
         self.name = name
         self.size = size
 
@@ -20,6 +23,7 @@ class Coat(Clothes):
 
 class Suit(Clothes):
     def __init__(self, name, growth):
+        super().__init__(growth)
         self.name = name
         self.growth = growth
 
