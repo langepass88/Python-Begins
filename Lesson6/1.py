@@ -1,4 +1,4 @@
-import time
+from time import sleep
 
 
 class TrafficLight:
@@ -9,15 +9,15 @@ class TrafficLight:
         if color == 'red':
             self.__color = color
             print('red')
-            time.sleep(7)
+            sleep(7)
         elif color == 'yellow' and self.__color == 'red':
             self.__color = color
             print('yellow')
-            time.sleep(2)
+            sleep(2)
         elif color == 'green' and self.__color == 'yellow':
             self.__color = color
             print('green')
-            time.sleep(3)
+            sleep(3)
         else:
             print('Error')
 
