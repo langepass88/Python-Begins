@@ -20,16 +20,7 @@ class Cell:
         return self.count // other.count
 
     def make_order(self, line):
-        str_1 = ''
-        c1 = self.count // int(line)
-        c2 = self.count - (c1 * line)
-        for i in range(c1):
-            for j in range(line):
-                str_1 += '*'
-            str_1 += '\n'
-        for i in range(c2):
-            str_1 += '*'
-        return str_1
+        return '\n'.join(['*' * line for _ in range(self.count // line)]) + '\n' + '*' * (self.count % line)
 
 
 a = Cell(15)
@@ -38,4 +29,4 @@ c = Cell(a + b)
 d = Cell(a - b)
 e = Cell(a * b)
 f = Cell(a / b)
-print(a.make_order(5))
+print(a.make_order(4))
